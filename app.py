@@ -13,8 +13,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 
 app.secret_key = 'Ahmed'  # secret key
 
-# OpenAI API key 
-openai.api_key = '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'
+
 
 users = {} 
 
