@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SymptoCare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+         body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-image: url('https://i.ibb.co/HBQZtMs/spathiphyllum-cannifolium-concept-green-abstract-600nw-1716081862-jpg.webp');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        }
+
+        .main-container {
+        padding-top: 60px; /* Adjust this value based on the actual height of your navbar */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Changed to start aligning content below the navbar */
+        align-items: center;
+        min-height: 100vh;
+        padding: 50px 20px;
+        }
+
+        .navbar {
+        display: flex;
+        justify-content: space-between; /* This keeps the logo on the left and nav-links on the right */
+        align-items: center;
+        padding: 0 20px;
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+        }
+        .navbar a:hover {
+            color: #0a5f0a;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .about-content {
+            background: rgba(255, 255, 255, 0.85);
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            text-align: left; /* For text alignment within the container */
+        }
+
+        .about-content h1, .about-content h2, .about-content h3 {
+            color: #0a5f0a;
+        }
+
+        .about-content p {
+            text-align: justify;
+            margin: 20px 0;
+        }
+
+        .about-content a {
+            color: #0d6d10;
+            text-decoration: none;
+        }
+
+        .about-content a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: hwb(210 98% 2% / 0.307);
+            padding: 10px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo">SymptoCare</div>
+            <div class="nav-links">
+                <a href="/home">Home</a>
+                <a href="/about" class="active">About</a>
+                <a href="/diagnose">Diagnose</a>
+                <a href="/contact">Contact</a>
+                <a href="/logout">Signout</a>
+            </div>
+        </nav>        
+        
+        <main class="about-content">
+            <h1>About SymptoCare</h1>
+            <h2>Empowering Health Through Technology</h2>
+            
+            <p>At SymptoCare, we are dedicated to revolutionizing the way individuals access healthcare information and services.Our platform serves as a bridge between cutting-edge artificial intelligence technologies and the everyday health concerns of people around the globe. With a commitment to accuracy, privacy, and user-centric design, we aim to make healthcare advice more accessible, understandable, and actionable for everyone, regardless of language or location.
+
+            </p>
+            
+            <h3>Our Mission</h3>
+            <p>Our mission is to democratize access to health information, breaking down barriers that stand between individuals and the knowledge they need to make informed health decisions. We believe in leveraging technology to provide personalized, precise, and prompt health insights that empower users to better understand their symptoms and when to seek professional medical advice.
+            
+            </p>
+            
+            <h3>Technology and Innovation</h3>
+            <p>At the heart of our platform is a suite of AI-powered assistants, each designed to fulfill a specific function — from symptom checking and medical diagnosis to language translation. By integrating multiple OpenAI assistant APIs, we ensure that our services are versatile, responsive, and inclusive. Our technology understands and communicates in multiple languages, ensuring that users worldwide can benefit from our services in the comfort of their native tongue.</p>
+            
+            <h3>Privacy and Trust</h3>
+            <p>We understand the importance of privacy and trust, especially when it comes to personal health information. Our platform is built on the principles of security, confidentiality, and user consent. We are committed to maintaining the highest standards of data protection and privacy practices, ensuring that your information is safe and used responsibly.</p>
+            
+            <h3>Join Our Journey</h3>
+            <p>SymptoCare is more than just a platform; it's a community of individuals passionate about making a positive impact on global health. Whether you're seeking information for yourself or someone you care about, we're here to provide the insights you need. Join us on our journey to make health information more accessible, understandable, and actionable for everyone.</p>
+            
+            <p>For more information, inquiries, or feedback, please <a href="/contact">Contact Us</a>.</p>
+        </main>
+
+    </div>
+    <div class="footer">
+        &copy; 2024 SymptoCare. All rights reserved.
+    </div>
+</body>
+</html>

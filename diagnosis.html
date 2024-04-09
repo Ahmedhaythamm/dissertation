@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Results</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 80%; /* Make sure the body takes the full height */
+            background: no-repeat center center fixed; 
+            background-size: cover;
+        }
+
+        /* Add your images here in the animation */
+        @keyframes slideShow {
+            0% { background-image: url('https://i.ibb.co/XLRGXWZ/Doctor-computer-medical-records.jpg'); }
+            25% { background-image: url('https://i.ibb.co/7t7jBTd/image-jpg.webp'); }
+            50% { background-image: url('https://i.ibb.co/wSzRXFx/doctor-holding-patient-report-file-assess-symptoms-desk-103643-96-jpg.webp'); }
+            75% { background-image: url('https://i.ibb.co/gb0t5Qc/shutterstock-2036186195.jpg'); }
+            100% { background-image: url('https://i.ibb.co/XLRGXWZ/Doctor-computer-medical-records.jpg'); }
+        }
+
+
+        /* Apply the animation to the body */
+        body {
+            animation: slideShow 30s ease-in-out infinite;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 2;
+        }
+
+
+        .results {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .disease + .disease {
+            margin-top: 10px;
+        }
+
+        .disease h2 {
+            margin: 0;
+            color: #0a5f0a; /* or any other color you prefer */
+            font-size: 1.2em; /* or size of your choice */
+        }
+
+        .disease p {
+            margin: 0;
+            font-size: 1em; /* or size of your choice */
+        }
+
+       
+    
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #0a5f0a;
+            font-weight: bold;
+        }
+
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .consult-notice {
+            font-style: italic; /* for example, to make it italic */
+            text-align: center; /* if you want to center it */
+            margin-top: 20px; /* adds space above the line */
+            padding: 10px; /* adds space around the text */
+            background-color: rgba(255, 255, 224, 0.8); /* light yellow background, for example */
+            border-radius: 8px; /* rounded corners */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Diagnosis Results</h1>
+    <div class="results">
+        {% for disease in diseases %}
+            <div class="disease">
+                <h2>{{ disease.name }}</h2>
+                <p>{{ disease.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    <p class="consult-notice">
+        It's essential to consult with a healthcare provider for a proper diagnosis and treatment if you are experiencing these symptoms or feel that you have any of these diseases.
+    </p>
+    <a href="/home" class="back-home">Back to Home</a>
+</div>
+
+    
+</body>
+</html>

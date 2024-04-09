@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SymptoCare</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-image: url('https://i.ibb.co/pJRBCV9/aesthetic-palm-leaves-background-p65vvd6wgslk4lb5.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+        }
+        .navbar a:hover {
+            color: #0a5f0a;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 60px); /* Adjust height based on navbar height */
+            padding: 20px;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            padding: 40px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input[type=text],
+        .contact-form input[type=email],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form textarea {
+            height: 150px; /* Adjust the height of the textarea */
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-form button:hover {
+            background: #45a049;
+        }
+
+        .footer {
+            background: hwb(210 98% 2% / 0.307);
+            padding: 10px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <div class="logo">SymptoCare</div>
+            <div>
+                <a href="/home">Home</a>
+                <a href="/about">About</a>
+                <a href="/diagnose">Diagnose</a>
+                <a href="/contact">Contact</a>
+                <a href="/">Signout</a>
+            </div>
+        </div>
+
+    <div class="contact-container">
+        <form class="contact-form">
+            <h2>Contact Us</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+    <footer class="footer">
+        © 2024 SymptoCare, All rights reserved.
+    </footer>
+</body>
+</html>
